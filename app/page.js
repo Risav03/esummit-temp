@@ -1,113 +1,135 @@
 import Image from "next/image";
+import bg from "@/bg.png"
 
 export default function Home() {
+
+  const teamName = "Project XYZ"
+
+  const info = [
+    {
+      name: "Avelo Roy",
+      img: "0",
+      funding: "10,00,000",
+      equity: "10%",
+      loan: "10,000",
+      interest: "10",
+      duration: "2 years",
+      royalty: "10"
+    },
+    {
+      name: "Avelo Roy",
+      img: "0",
+      funding: "0",
+      equity: "0",
+      loan: "20,000",
+      interest: "7",
+      duration: "5 months",
+      royalty: "1.25"
+    },
+    {
+      name: "Avelo Roy",
+      img: "0",
+      funding: "0",
+      equity: "0",
+      loan: "0",
+      interest: "0",
+      duration: "0",
+      royalty: "0"
+    },
+    {
+      name: "Avelo Roy",
+      img: "0",
+      funding: "0",
+      equity: "0",
+      loan: "0",
+      interest: "0",
+      duration: "0",
+      royalty: "0"
+    },
+    {
+      name: "Avelo Roy",
+      img: "0",
+      funding: "0",
+      equity: "0",
+      loan: "0",
+      interest: "0",
+      duration: "0",
+      royalty: "0"
+    },
+    
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center overflow-hidden justify-start py-16 px-10">
+      <div className="blur-[50px] w-screen object-contain absolute top-0">
+        <Image src={bg} />
+      </div>
+
+      <div className="relative z-50">
+        <h1 className="text-teal-500 font-bold text-5xl">{teamName}</h1>
+      </div>
+        <div className="grid grid-flow-col border-t-[2px] border-r-[2px] border-teal-400/20 grid-cols-5 w-[95%] mx-auto py-10 gap-4 bg-black/20 px-4 rounded-xl my-10 relative z-50">
+            <div className="grid grid-flow-row text-center grid-rows-5">
+            <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl flex items-center text-xl justify-center bg-black/20 rounded-xl">VC</h1>
+                {/* img1 */}
+                {/* img2 */}
+                {/* img3 */}
+                {/* img4 */}
+                {/* img5 */}
+            </div>
+            <div className="grid grid-flow-row text-center grid-rows-5 bg-black/20 rounded-xl">
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl flex items-center text-xl justify-center bg-black/20 rounded-xl">Funding(₹)</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[0].funding}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[1].funding}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[2].funding}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[3].funding}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[4].funding}</h1>
+            </div>
+            <div className="grid grid-flow-row text-center grid-rows-5 bg-black/20 rounded-xl">
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl flex items-center text-xl justify-center bg-black/20 rounded-xl">Equity(%)</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[0].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[1].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[2].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[3].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[4].equity}</h1>
+            </div>
+            <div className="grid grid-flow-row text-center grid-rows-5 bg-black/20 rounded-xl">
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl flex items-center text-xl justify-center text-center bg-black/20 rounded-xl">Loan</h1>
+                <div className="flex gap-4 font-bold w-full justify-center h-24 border-b-[1px] border-teal-400/20 rounded-b-xl items-center text-lg text-center">
+                  <h1 >{info[0].loan}, </h1>
+                  <h1>{info[0].interest}, </h1>
+                  <h1>{info[0].duration}</h1>
+                </div>
+                <div className="flex gap-4 font-bold w-full justify-center h-24 border-b-[1px] border-teal-400/20 rounded-b-xl items-center text-lg text-center">
+                  <h1 >{info[1].loan}, </h1>
+                  <h1>{info[1].interest}, </h1>
+                  <h1>{info[1].duration}</h1>
+                </div>
+                <div className="flex gap-4 font-bold w-full justify-center h-24 border-b-[1px] border-teal-400/20 rounded-b-xl items-center text-lg text-center">
+                  <h1 >{info[2].loan}, </h1>
+                  <h1>{info[2].interest}, </h1>
+                  <h1>{info[2].duration}</h1>
+                </div>
+                <div className="flex gap-4 font-bold w-full justify-center h-24 border-b-[1px] border-teal-400/20 rounded-b-xl items-center text-lg text-center">
+                  <h1 >{info[3].loan}, </h1>
+                  <h1>{info[3].interest}, </h1>
+                  <h1>{info[3].duration}</h1>
+                </div>
+                <div className="flex gap-4 font-bold w-full justify-center h-24 border-b-[1px] border-teal-400/20 rounded-b-xl items-center text-lg text-center">
+                  <h1 >{info[4].loan}, </h1>
+                  <h1>{info[4].interest}, </h1>
+                  <h1>{info[4].duration}</h1>
+                </div>
+            </div>
+            <div className="grid grid-flow-row text-center grid-rows-5 bg-black/20 rounded-xl">
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl flex items-center text-xl justify-center bg-black/20 rounded-xl">Royalty(₹)</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[0].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[1].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[2].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[3].equity}</h1>
+                <h1 className="h-24 border-b-[1px] border-teal-400/20 rounded-b-xl text-2xl font-bold flex items-center justify-center">{info[4].equity}</h1>
+            </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
